@@ -229,7 +229,7 @@ def main():
         else: #the loop ended with the attempts reaching 0
             print(("\nBummer! The word was {}.").format(chosen_word))
 
-        print("\nWanna have another go at it?")
+        print("\nWanna give it another shot?")
 
         response = input("> ").lower()
         if response not in ("yes", "y"):

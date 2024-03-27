@@ -1,0 +1,28 @@
+import string
+
+my_story = """Yeah, I've been throwin' down the whiskey, I oughta get my money back
+And someone said it drowns a memory, Ah, but it ain't doing jack. Yeah, I've been sippin', I've been buzzin'
+Shootin' doubles like it's nothin', Ah, but nothin' makes you go away"""
+
+punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+
+def remove_punctuation(s):
+    s_without_punct = ""
+    for letter in s:
+        if letter not in string.punctuation:
+            s_without_punct += letter
+    return s_without_punct
+
+wds = remove_punctuation(my_story).split()
+print(wds)
+
+def check_character(my_story, character):
+    my_story = my_story.lower()
+    count_sum = len(list(c for c in my_story if c in string.ascii_lowercase))
+    count_char = len(list(c for c in my_story if c == character))
+    return count_sum, count_char, 100 * count_char / float(count_sum)
+
+char = 'e'
+result = check_character(my_story, char) + (char,)
+
+print("Your text contains {} alphabetic characters of which {} ({:.2f}%) are '{}'.".format(*result))

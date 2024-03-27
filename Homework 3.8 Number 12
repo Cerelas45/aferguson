@@ -1,0 +1,23 @@
+import turtle
+
+theWindow =turtle.Screen()
+theWindow.bgcolor("lightgreen")
+
+adam = turtle.Turtle()
+adam.shape("turtle")
+adam.color("blue")
+adam.pensize(6)
+
+for Clockmarks in range(12):
+    adam.penup()
+    adam.forward(180)
+    adam.pendown()
+    adam.forward(30)
+    adam.penup()
+    adam.forward(40)
+    adam.stamp()
+    adam.backward(250)
+    adam.left(360/12)
+
+
+theWindow.mainloop()

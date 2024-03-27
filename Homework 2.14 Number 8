@@ -1,0 +1,6 @@
+time_now_str = input("What time is it?" )
+time_now = int(2)
+print(time_now)
+hours_till_alarm_str = input("What time will alarm go off?" )
+hours_till_alarm = int(51)
+print((51 % 24) + 2)

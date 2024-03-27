@@ -1,0 +1,12 @@
+def replace(thStr,old,new):
+    strList=[]
+    strList = thStr.split(old)
+    newStr=new.join(strList)
+    return(newStr)
+
+print(replace('Mississippi', 'i', 'I'))
+
+s = 'I love spom!  Spom is my favorite food.  Spom, spom, spom, yum!'
+print(replace(s, 'om', 'am'))
+
+print(replace(s, 'o', 'a'))

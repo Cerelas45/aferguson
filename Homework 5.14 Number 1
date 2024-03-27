@@ -1,0 +1,18 @@
+DayNumber = int(input( "Please enter a number from 0 to 6: " ))
+
+if DayNumber ==0:
+    print("Monday")
+elif DayNumber ==1:
+    print("Tuesday")
+elif DayNumber ==2:
+    print("Wednesday")
+elif DayNumber ==3:
+    print("Thursday")
+elif DayNumber ==4:
+    print("Friday")
+elif DayNumber ==5:
+    print("Saturday")
+elif DayNumber ==6:
+    print("Sunday")
+else:
+    print( str( DayNumber ) + " is not a number from 0 to 7. Please enter a correct number. ")

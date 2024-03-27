@@ -1,0 +1,19 @@
+from turtle import Turtle, Screen
+
+HYPOTENUSE = (2 ** 0.5) / 2
+
+screen = Screen()
+screen.bgcolor("lightgreen")
+
+tom = Turtle()
+tom.pencolor("purple")
+tom.setheading(45)
+tom.width(3)
+
+for radius in range(20, 20 * 5 + 1, 20):
+    tom.penup()
+    tom.goto(radius/2, -radius/2)
+    tom.pendown()
+    tom.circle(radius * HYPOTENUSE, steps=4)
+
+screen.exitonclick()

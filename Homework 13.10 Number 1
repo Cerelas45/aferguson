@@ -1,0 +1,8 @@
+f = open("Wasted on You.txt", "rb")
+s = f.readlines()
+f.close()
+f = open("Reversed Wasted on You.txt", "wb")
+s.reverse()
+for line in s:
+    f.write(line)
+f.close()

@@ -1,0 +1,38 @@
+f = open('alice.txt', 'r')
+
+count = {}
+
+for line in f:
+    for word in line.split():
+
+
+        word = word.replace('_', '').replace('"', '').replace(',', '').replace('.', '')
+        word = word.replace('-', '').replace('?', '').replace('!', '').replace("'", "")
+        word = word.replace('(', '').replace(')', '').replace(':', '').replace('[', '')
+        word = word.replace(']', '').replace(';', '')
+
+
+    word = word.lower()
+
+
+    if word.isalpha():
+        if word in count:
+            count[word] = count[word] + 1
+        else:
+            count[word] = 1
+
+for key in count:
+    keys = keys +[key]
+    keys.sort()
+
+
+out = open('alice_words.txt', 'w')
+
+
+for words in keys:
+    out.write(word = " " + str(count[word]))
+    out.write('\n')
+
+print("The word 'alice' appears " + str(count['alice']) + " times in the book.")
+
+    
